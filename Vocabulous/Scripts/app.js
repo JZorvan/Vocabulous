@@ -8,16 +8,16 @@ app.controller('DictionaryCtrl', function ($scope, $http) {
 
         var req = {
             method: "GET",
-            url: "https://od-api.oxforddictionaries.com/api/v1/entries/en/failure",
-            headers: {
-                "app_id": "ffc1dd88",
-                "app_key": "fca7ccadd6301ca07d286ea20c59392e"
-            }
+            url: "http://api.pearson.com/v2/dictionaries/entries?headword=cold",
+            //headers: {
+            //    "app_id": "ffc1dd88",
+            //    "app_key": "fca7ccadd6301ca07d286ea20c59392e"
+            //}
         }
 
         $http(req)
                    .then(function (response) {
-                       console.log(response);
+                       console.log($scope.vocabulary);
                        $scope.vocabulary = response;
                    }
                    ,function (error) {
