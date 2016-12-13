@@ -3,17 +3,10 @@
 }
 
 <div ng-controller="DictionaryCtrl">
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Testing the api call</h2>
-        <button ng-click="getDictionary()">Get the definition for 'failure'</button>
-
+  <div class="row">
+    <div class="col-lg-12">
+        <textarea class="form-control" rows="10" cols="300" ng-model="userInput"></textarea>
+        <button ng-click="getDictionary()" class="center">Get definitions</button>
     </div>
-</div>
-</div>
+  </div>
+</div> 
